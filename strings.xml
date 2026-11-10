@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Estúdio Ana Elizabeth</string>
+    <string name="meus_treinos">Meus treinos</string>
+    <string name="carregando">Carregando…</string>
+
+    <string name="resumo_evolucao">%1$d treinos concluídos · %2$.1f km · pace médio %3$s</string>
+    <string name="pace_formatado">%1$.2f min/km</string>
+    <string name="sem_pace">—</string>
+
+    <string name="item_detalhes">%1$s · %2$.1f km previstos</string>
+    <string name="item_pendente">Pendente — toque para concluir</string>
+    <string name="item_concluido">Concluído: %1$.1f km em %2$d min</string>
+
+    <string name="concluir_titulo">Concluir treino</string>
+    <string name="hint_km">Distância (km)</string>
+    <string name="hint_minutos">Duração (minutos)</string>
+    <string name="salvar">Salvar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="treino_registrado">Treino registrado!</string>
+
+    <string name="erro_valores">Informe valores válidos de distância e duração.</string>
+    <string name="erro_rede">Sem conexão com o servidor.</string>
+    <string name="erro_servidor">Erro do servidor (%1$d).</string>
+</resources>

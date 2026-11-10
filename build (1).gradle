@@ -1,0 +1,50 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'br.com.estudioanaelizabeth.app'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "br.com.estudioanaelizabeth.app"
+        minSdk 24
+        // A Play Store exige um targetSdk mínimo que sobe todo ano: confira o valor atual antes de publicar.
+        targetSdk 35
+        versionCode 1
+        versionName "0.1.0"
+    }
+
+    buildTypes {
+        debug {
+            // 10.0.2.2 = o "localhost" do computador visto de dentro do emulador Android
+            buildConfigField "String", "API_BASE_URL", "\"http://10.0.2.2:8080/\""
+            manifestPlaceholders = [usesCleartext: "true"]
+        }
+        release {
+            // TODO: trocar pelo domínio real do backend (HTTPS obrigatório em produção)
+            buildConfigField "String", "API_BASE_URL", "\"https://api.SEU-DOMINIO.com.br/\""
+            manifestPlaceholders = [usesCleartext: "false"]
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.11.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
+}

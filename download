@@ -1,0 +1,25 @@
+# Segredos
+.env
+*.jks
+*.keystore
+keystore.properties
+
+# Java / Maven
+target/
+*.class
+*.log
+
+# Android / Gradle
+.gradle/
+build/
+local.properties
+captures/
+.cxx/
+*.apk
+*.aab
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.DS_Store

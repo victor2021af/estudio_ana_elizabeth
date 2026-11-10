@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cores provisórias: trocar pela identidade visual do estúdio -->
+    <color name="estudio_primaria">#D81B60</color>
+    <color name="estudio_primaria_escura">#A00037</color>
+    <color name="white">#FFFFFF</color>
+</resources>

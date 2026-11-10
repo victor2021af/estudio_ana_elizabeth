@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: estudio-ana-elizabeth
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/estudio}
+    username: ${DB_USER:estudio}
+    password: ${DB_PASSWORD:estudio}
+  jpa:
+    open-in-view: false
+    hibernate:
+      # "update" é só para desenvolvimento. Antes de produção, trocar por Flyway/Liquibase + "validate".
+      ddl-auto: ${DDL_AUTO:update}
+
+server:
+  port: ${PORT:8080}
+
+estudio:
+  timezone: America/Sao_Paulo
+  inatividade:
+    dias-limite: 3
+    intervalo-reaviso-dias: 3
+    # Todo dia às 09:00 (fuso de estudio.timezone). Formato Spring: seg min hora dia mês dia-da-semana
+    cron: "0 0 9 * * *"
+
+whatsapp:
+  # Confira na documentação da Meta qual versão da Graph API está vigente e ajuste se necessário.
+  api-base-url: ${WHATSAPP_API_BASE_URL:https://graph.facebook.com/v21.0}
+  phone-number-id: ${WHATSAPP_PHONE_NUMBER_ID:}
+  access-token: ${WHATSAPP_ACCESS_TOKEN:}
+  verify-token: ${WHATSAPP_VERIFY_TOKEN:}
+  app-secret: ${WHATSAPP_APP_SECRET:}
+  template-inatividade: ${WHATSAPP_TEMPLATE_INATIVIDADE:aluna_inativa}
+  template-language: ${WHATSAPP_TEMPLATE_LANGUAGE:pt_BR}
